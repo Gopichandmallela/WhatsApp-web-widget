@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>WhatsApp Widget - (c) Fajar Setya Budi</title>
+    <link rel="stylesheet" href="dist/css/whatsapp-widget.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+ 
+
+    <!-- Built in form -->
+    <form id="general-support" class="wa-widget" action="9010712941" data-chat="general-support"></form>
+    <!-- End -->
+
+    <script src="dist/js/whatsapp-widget.min.js"></script>
+    <script>
+        var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+            name: 'Akbar',
+            division: 'General Supports',
+            photo: 'images/user.png',
+            introduction: 'Welcome to Code connex How may i help u?.'
+        }, [
+            // {
+            //     data: 'name',
+            //     type: 'text',
+            //     required: true
+            // }, {
+            //     data: 'email',
+            //     type: 'email',
+            //     required: false
+            // },
+            {
+                data: 'message',
+                type: 'text',
+                required: true
+            }
+        ]);
+        generalSupport.toggle()
+    </script>
+</body>
+</html>
